@@ -155,6 +155,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1135060716}
   - 114: {fileID: 1135060717}
+  - 114: {fileID: 1135060718}
   - 23: {fileID: 1135060715}
   m_Layer: 0
   m_Name: WorldOrigin
@@ -173,7 +174,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: badc08f50ca2a32449831a4f9e9e6b9b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -218,6 +219,17 @@ MonoBehaviour:
   seed: 
   useRandomSeed: 1
   randomFillPercent: 50
+--- !u!114 &1135060718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1135060714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d447fc88b2ba44cba04bb97978cdad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1971181387
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +239,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1971181388}
   - 23: {fileID: 1971181389}
+  - 33: {fileID: 1971181390}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -256,7 +269,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: badc08f50ca2a32449831a4f9e9e6b9b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -272,6 +285,13 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!33 &1971181390
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1971181387}
+  m_Mesh: {fileID: 0}
 --- !u!1 &2137969372
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,7 +21,9 @@ public class WorldGenerator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (Input.GetMouseButtonDown (0)) {
+			CreateMap ();
+		}
 	}
 
 	void CreateMap() {
@@ -32,6 +34,9 @@ public class WorldGenerator : MonoBehaviour {
 		for (int i = 0; i < 5; i++) {
 			Smoothing ();
 		}
+
+		MeshGenerator meshGen = GetComponent<MeshGenerator>();
+		meshGen.GenerateMesh(map, 1);
 
 	}
 
@@ -88,16 +93,8 @@ public class WorldGenerator : MonoBehaviour {
 		}
 	}
 
-	void OnDrawGizmos(){ 	// remove later
-		
-		if (map != null) {
-			for (int x = 0; x < width; x++) {
-				for (int y = 0; y < height; y++) {
-					Gizmos.color = (map [x, y] == 1) ? Color.black : Color.blue; // if the result is 1 colour black, if it is 0 colour white
-					Vector3 pos = new Vector3 (-width / 2 + x + .5f, 0, -height / 2 + y + .5f);// offset the postion of the new tile so they dont overlap
-					Gizmos.DrawCube (pos, Vector3.one);
-				}
-			}
-		}
+	void OnDrawGizmos(){
+	
 	}
+
 }
